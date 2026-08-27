@@ -1,0 +1,4 @@
+controller\PersonajeController.class
+com\mycompany\rpg\manager\java\RpgManagerJava.class
+model\Personaje.class
+model\PersonajeRepositorio.class
