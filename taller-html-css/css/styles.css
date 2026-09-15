@@ -1,0 +1,306 @@
+
+:root {
+    --color-primary: #D62828;
+    --color-accent: #F4A261;
+    --color-bg: #FFF8F0;
+    --color-text: #2B2B2B;
+    --space: 1rem;
+}
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+    padding: calc(var(--space) * 2);
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+   ========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space);
+    padding: var(--space);
+    background-color: white;
+}
+
+nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: calc(var(--space) * 2);
+}
+
+section {
+    margin-bottom: calc(var(--space) * 3);
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+#inicio {
+    text-align: center;
+    padding: calc(var(--space) * 3);
+}
+
+#inicio h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+#inicio p {
+    max-width: 700px;
+    margin: 0 auto var(--space);
+}
+
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+
+#menu {
+    text-align: center;
+}
+
+#menu > article {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    vertical-align: top;
+}
+
+
+/* Tarjeta reutilizable */
+
+.card {
+    background-color: white;
+    padding: calc(var(--space) * 1.5);
+    border: 1px solid #E5E5E5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--color-primary);
+}
+
+.card p {
+    margin-bottom: var(--space);
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.button,
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background-color: var(--color-accent);
+}
+
+.button:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   NOSOTROS
+   ========================= */
+
+#nosotros {
+    background-color: white;
+    padding: calc(var(--space) * 2);
+    border-radius: 12px;
+}
+
+#nosotros h2,
+#nosotros h3 {
+    color: var(--color-primary);
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+#contacto {
+    background-color: white;
+    padding: calc(var(--space) * 2);
+    border-radius: 12px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: var(--space);
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--color-accent);
+    border-color: var(--color-primary);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: calc(var(--space) * 2);
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+
+
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;       /* Asegura que vayan de izquierda a derecha */
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space);
+    width: 100%;
+}
+
+.checkbox-group input[type="checkbox"] {
+    order: 1;                  /* Coloca el checkbox primero */
+    margin: 0;
+    flex-shrink: 0;
+    width: auto;               /* Sobrescribe un posible width: 100% de la casilla */
+}
+
+.checkbox-group label {
+    order: 2;                  /* Coloca el label después del checkbox */
+    margin: 0;
+    font-weight: normal;
+    width: auto;               /* Permite que el texto se expanda horizontalmente */
+    max-width: none;
+    white-space: normal;
+}
+
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu > article {
+        display: block;
+        width: 100%;
+        margin: var(--space) 0;
+    }
+
+    main {
+        padding: var(--space);
+    }
+
+    #inicio {
+        padding: var(--space);
+    }}
