@@ -1,0 +1,4 @@
+com\mycompany\rpg\manager\model\PersonajeRepositorio.class
+com\mycompany\rpg\manager\model\Personaje.class
+com\mycompany\rpg\manager\servicio\PersonajeServicio.class
+com\mycompany\rpg\manager\PersonajeController.class
